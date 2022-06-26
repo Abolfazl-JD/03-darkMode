@@ -6,14 +6,12 @@ interface CardProps {
     author: string;
   };
 }
-const { isDarkMode } = useDarkMode();
 const props = defineProps<CardProps>();
 </script>
 
 <template>
   <div
-    class="card"
-    :style="isDarkMode ? { backgroundColor: 'rgb(50,50,50)', color: 'white' } : null"
+    class="card !dark:(bg-dark-800 text-white)"
   >
     <img :src="card.img" alt="" />
     <div class="content">

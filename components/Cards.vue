@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { isDarkMode } = useDarkMode();
 const cards = [
   {
     img: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -36,11 +35,10 @@ const cards = [
 
 <template>
   <div
-    class="box-container"
-    :style="isDarkMode ? { backgroundColor: 'black' } : null"
+    class="box-container dark:bg-black"
   >
     <div class="content-box-container">
-      <h3 :style="isDarkMode ? { color: 'white' } : null">Reading List</h3>
+      <h3 class="dark:text-white">Reading List</h3>
       <div class="cards-box-container">
         <Card v-for="(card, index) in cards" :key="index" :card="card" />
       </div>
@@ -51,7 +49,6 @@ const cards = [
 <style scoped>
 .box-container {
   margin: 30px 0 0;
-  background: rgba(250, 250, 194, 0.637);
 }
 
 .content-box-container {
