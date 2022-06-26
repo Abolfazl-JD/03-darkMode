@@ -36,12 +36,12 @@ const cards = [
 
 <template>
   <div
-    class="container"
+    class="box-container"
     :style="isDarkMode ? { backgroundColor: 'black' } : null"
   >
-    <div class="content-container">
+    <div class="content-box-container">
       <h3 :style="isDarkMode ? { color: 'white' } : null">Reading List</h3>
-      <div class="cards-container">
+      <div class="cards-box-container">
         <Card v-for="(card, index) in cards" :key="index" :card="card" />
       </div>
     </div>
@@ -49,18 +49,18 @@ const cards = [
 </template>
 
 <style scoped>
-.container {
+.box-container {
   margin: 30px 0 0;
   background: rgba(250, 250, 194, 0.637);
 }
 
-.content-container {
+.content-box-container {
   width: 50%;
   margin: 0 auto;
   padding: 40px 0;
 }
 
-.cards-container {
+.cards-box-container {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
