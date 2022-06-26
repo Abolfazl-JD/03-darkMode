@@ -1,12 +1,11 @@
 <script setup lang="ts">
 const { isDarkMode, toggleDarkMode } = useDarkMode()
-const { x, y } = useMouse()
 </script>
 
 <template>
   <nav :style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null">
     <div :style="isDarkMode ? { color: 'white' } : null">
-      <h1 class="!text-red-500">Artikle {{ isDarkMode }} , pos: {{x}}, {{y}}</h1>
+      <h1 class="!text-red-500">Artikle {{ isDarkMode }}</h1>
       <label class="switch">
         <input type="checkbox" v-model="isDarkMode" @click="toggleDarkMode" />
         <span class="slider round"></span>
