@@ -5,4 +5,7 @@ export default defineNuxtConfig({
     buildModules: [
         'nuxt-windicss',
     ],
+    modules: [
+        '@vueuse/nuxt',
+    ],    
 })
